@@ -10,7 +10,9 @@ The Smart AI Tutor Agent is a next-generation educational technology solution de
 Ensures learners receive **fair, inclusive, and pedagogically sound** explanations.
 
 ✔️ **Bias Mitigation**: Eliminates cultural, gender-based, socioeconomic, linguistic, and ability-related biases.
+
 ✔️ **Pedagogical Clarity**: Generates structured, curriculum-aligned content for any subject or chapter (e.g., Mathematics → Quadratic Equations).
+
 ✔️ **Conceptual Foundation**: Focuses on definitions, theories, examples, and relatable analogies.
 
 ## 🤖 2. Adaptive Step-by-Step Exercise Assistance (exercise_orchestrator_agent)
@@ -18,7 +20,9 @@ Ensures learners receive **fair, inclusive, and pedagogically sound** explanatio
 This is the **adaptive core** of the system, providing targeted learning support.
 
 ✔️ **Smart Exercise Generation**: Retrieves or creates problems based on topic and difficulty (Easy, Medium, Hard).
+
 ✔️ **Hint-Based Scaffolding**: Offers incremental hints without revealing full solutions, maintaining student engagement and autonomy.
+
 ✔️ **Real-Time Performance Monitoring**: Tracks:
 
 | Metric             | Purpose                      |
@@ -28,7 +32,9 @@ This is the **adaptive core** of the system, providing targeted learning support
 | Hint frequency     | Confidence and support need  |
 
 ✔️ **Struggle Index**: Uses tracked metrics to analyze student difficulty level.
+
 ✔️ **Surgical Micro-Remediation**: Provides laser-focused mini-lessons on specific misconceptions—nothing more, nothing less.
+
 ✔️ **Automated Teacher Reporting**: Summarizes performance trends, struggle areas, and concept mastery for human educators.
 
 ## 🏗️ System Architecture
@@ -36,12 +42,19 @@ This is the **adaptive core** of the system, providing targeted learning support
 The Smart AI Tutor Agent uses a **Sequential Pipeline Architecture**, enabling complex, stateful learning flows.
 
  OverallPipeline (Root Agent)
+ 
  ├── theory_agent
+ 
  │   └─ Generates bias-free instructional content
+ 
  └── exercise_orchestrator_agent
+ 
      ├─ Selects and adapts exercises
+     
      ├─ Provides hint scaffolding
+     
      ├─ Assesses real-time performance
+     
      └─ Generates remediation and reports
 
 | Agent Name                    | Role           | Function                                             |
@@ -64,12 +77,19 @@ The Smart AI Tutor Agent uses a **Sequential Pipeline Architecture**, enabling c
 
 graph TD;
     Start --> TheoryAgent;
+    
     TheoryAgent --> ExerciseAgent;
+    
     ExerciseAgent --> RealTimeAssessment;
+    
     RealTimeAssessment -->|Struggle Detected| MicroRemediation;
+    
     MicroRemediation --> ExerciseAgent;
+    
     RealTimeAssessment -->|No Struggle| ContinueExercises;
+    
     ContinueExercises --> ReportGeneration;
+    
     ReportGeneration --> End;
     
 ## 🎯 Goals & Impact
